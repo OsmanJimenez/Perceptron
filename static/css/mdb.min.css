@@ -63,3 +63,8 @@
   .sombra-btn {
     box-shadow: 0px 22px 54px -34px rgba(1,38,111,1);
   }
+
+  .col-sm{
+    padding-left: 3px;
+    padding-right: 3px;
+  }

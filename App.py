@@ -119,7 +119,11 @@ def cand():
     cur = mysql.connection.cursor()
     cur.execute('SELECT * FROM compuerta_an')    
     data = cur.fetchall()    
-    return render_template('and.html', compu_and = data)
+    
+    cur2 = mysql.connection.cursor()
+    cur2.execute('SELECT * FROM compuerta_an ORDER BY it DESC LIMIT 1')
+    data2 = cur2.fetchall()
+    return render_template('and.html', compu_and = data, compu_and2 = data2[0])
 
 if __name__ == '__main__':
     app.run(debug=True)
