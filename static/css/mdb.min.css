@@ -55,3 +55,11 @@
   ::-webkit-scrollbar-track:active {
     background: #d4d4d4;
   }
+
+  .sombra{
+    box-shadow: 0px 22px 55px -23px rgba(87,84,87,1);
+  }
+
+  .sombra-btn {
+    box-shadow: 0px 22px 54px -34px rgba(1,38,111,1);
+  }
