@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Perceptron Simple</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}" />
+  <!-- Custom styles -->
+  <style></style>
+</head>
+
+<body>
+  <nav>
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="true" href="#!">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Acerca de</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Perceptron Unicapa</h5>
+        <p class="card-text">
+          Aqui tengo que poner texto o una imagen, ya se me ocurrira algo.
+        </p>
+
+        <!-- Button trigger modal -->
+        <a type="button" class="btn btn-outline-primary" href="/and">
+          AND
+        </a>
+
+        <a type="button" class="btn btn-outline-primary">
+          OR
+        </a>
+
+        <a type="button" class="btn btn-outline-primary">
+          XOR
+        </a>
+
+        
+
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Comprobar Perceptron Unicapa Compuerta OR</h5>
+
+              </div>
+              <div class="modal-body">
+                <img src="{{ url_for('static', filename='img/perceptron.webp') }}" class="img-fluid rounded" style="width: 100%; height: 350px" alt="...">
+                <div class="container">
+                  <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm">
+                      <label for="x1" class="form-label">X1:</label>
+                      <select id="x1" class="form-select">
+                        <option>0</option>
+                        <option>1</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <label for="x2" class="form-label">X2:</label>
+                      <select id="x2" class="form-select">
+                        <option>0</option>
+                        <option>1</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <button type="button" class="btn btn-outline-success" style="margin-top: 35px;" data-dismiss="modal">Comprobar</button>
+                    </div>
+                    <div class="col-sm">
+                      <label for="resultado" class="form-label">Resultado:</label>
+                      <input type="text" class="form-control" id="resultado">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Comprobar Perceptron Unicapa Compuerta XOR</h5>
+              </div>
+              <div class="modal-body">
+                <img src="{{ url_for('static', filename='img/perceptron.webp') }}" class="img-fluid rounded" style="width: 100%; height: 350px" alt="...">
+                <div class="container">
+                  <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm">
+                      <label for="x1" class="form-label">X1:</label>
+                      <select id="x1" class="form-select">
+                        <option>0</option>
+                        <option>1</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <label for="x2" class="form-label">X2:</label>
+                      <select id="x2" class="form-select">
+                        <option>0</option>
+                        <option>1</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <button type="button" class="btn btn-outline-success" style="margin-top: 35px;" data-dismiss="modal">Comprobar</button>
+                    </div>
+                    <div class="col-sm">
+                      <label for="resultado" class="form-label">Resultado:</label>
+                      <input type="text" class="form-control" id="resultado">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+
+</body>
+
+<!-- MDB -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+<!-- Custom scripts -->
+<script type="text/javascript">
+</script>
+
+</html>
