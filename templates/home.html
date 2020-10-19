@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <title>Perceptron Simple</title>
   <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="{{ url_for('static', filename='img/perce.ico') }}" type="image/x-icon" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
   <!-- Google Fonts Roboto -->
@@ -48,7 +48,7 @@
           <div class="col-sm">
             <div class="card sombra">
               <div class="bg-image hover-overlay ripple" data-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+                <img src="{{ url_for('static', filename='img/com_and.png') }}" class="img-fluid" />
                 <a href="/and">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                 </a>
@@ -62,7 +62,7 @@
           <div class="col-sm">
             <div class="card sombra">
               <div class="bg-image hover-overlay ripple" data-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+                <img src="{{ url_for('static', filename='img/com_or.png') }}" class="img-fluid" />
                 <a href="/and">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                 </a>
@@ -76,7 +76,7 @@
           <div class="col-sm">
             <div class="card sombra">
               <div class="bg-image hover-overlay ripple" data-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+                <img src="{{ url_for('static', filename='img/com_xor.png') }}"  class="img-fluid" />
                 <a href="/and">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                 </a>
