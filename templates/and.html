@@ -37,7 +37,7 @@
         <h5 class="card-title text-center">Perceptron Unicapa</h5>
         <p class="card-text text-right">
           <a href="/and" type="button" class="btn btn-outline-success">Actualizar</a>
-          <button type="button" class="btn btn-outline-primary">Descargar</button>
+          <button type="button" class="btn btn-outline-primary" onclick="exportTableToExcel('tblData')">Descargar</button>
           <button type="button" class="btn btn-outline-info" data-toggle="modal"
             data-target="#exampleModal4">Comprobar</button>
         </p>
@@ -166,9 +166,7 @@
 
           </div>
         
-
-
-        <table class="table">
+        <table class="table" id="tblData">
           <thead>
             <tr>
               <th scope="col">Patron</th>
@@ -274,6 +272,32 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
 <!-- Custom scripts -->
 <script type="text/javascript">
+
+function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    filename = filename?filename+'.xls':'perceptrón_simple.xls';
+
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        downloadLink.download = filename;
+
+        downloadLink.click();
+    }
+}
 </script>
 
 </html>

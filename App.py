@@ -80,7 +80,7 @@ def cand():
 
     t = 1
     d = 0
-    e = 1
+    e = 2
     p1 = 0
     p2 = 0
     u = 0
@@ -106,10 +106,17 @@ def cand():
                 elif e == 0:
                     d, pat = valor_espe(d, pat, x1, x2)             
                     t, e, um = calculo(t, e, um, x1, x2, d, p1, p2, u, n, pat)
+                    if e != 0 :
+                        p1 ,p2 , u = pesos(p1, p2, u)
+                        d, pat = valor_espe(d, pat, x1, x2)             
+                        t, e, um = calculo(t, e, um, x1, x2, d, p1, p2, u, n, pat)
                 else:
-                    p1 ,p2 , u = pesos(p1, p2, u)
-                    d, pat = valor_espe(d, pat, x1, x2)             
-                    t, e, um = calculo(t, e, um, x1, x2, d, p1, p2, u, n, pat)
+                    while e != 0 :
+                        p1 ,p2 , u = pesos(p1, p2, u)
+                        d, pat = valor_espe(d, pat, x1, x2)             
+                        t, e, um = calculo(t, e, um, x1, x2, d, p1, p2, u, n, pat)
+                    
+                    
                         
                 
     print(um)
