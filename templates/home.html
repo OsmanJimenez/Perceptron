@@ -14,11 +14,43 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}" />
+  <!-- Preloader -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/preloader.css') }}" />
   <!-- Custom styles -->
   <style></style>
 </head>
 
 <body>
+
+  <div class="loader-page">
+    <div class="boxes">
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
   <nav>
     <div class="card text-center">
       <div class="card-header">
@@ -38,10 +70,10 @@
         </p>
       </div>
     </div>
-  <nav>
-      
-    <div class="mx-auto" style="width: 200px;height: 20px;">
-    </div>
+    <nav>
+
+      <div class="mx-auto" style="width: 200px;height: 20px;">
+      </div>
 
       <div class="container text-center">
         <div class="row">
@@ -76,7 +108,7 @@
           <div class="col-sm">
             <div class="card sombra">
               <div class="bg-image hover-overlay ripple" data-ripple-color="light">
-                <img src="{{ url_for('static', filename='img/com_xor.png') }}"  class="img-fluid" />
+                <img src="{{ url_for('static', filename='img/com_xor.png') }}" class="img-fluid" />
                 <a href="/and">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                 </a>
@@ -97,28 +129,16 @@
       <div class="card text-center">
         <div class="card-body">
           <p class="card-text">Desarrollado con:</p>
-          <button
-            type="button"
-            class="btn btn-outline-success btn-floating"
-            data-ripple-color="dark"
-          >
-          <i class="fab fa-python"></i>
-          </button>
-          
-          <button
-            type="button"
-            class="btn btn-outline-danger btn-floating"
-            data-ripple-color="dark"
-          >
-          <i class="fas fa-flask"></i>
+          <button type="button" class="btn btn-outline-success btn-floating" data-ripple-color="dark">
+            <i class="fab fa-python"></i>
           </button>
 
-          <button
-            type="button"
-            class="btn btn-outline-warning btn-floating"
-            data-ripple-color="dark"
-          >
-          <i class="fas fa-code"></i>
+          <button type="button" class="btn btn-outline-danger btn-floating" data-ripple-color="dark">
+            <i class="fas fa-flask"></i>
+          </button>
+
+          <button type="button" class="btn btn-outline-warning btn-floating" data-ripple-color="dark">
+            <i class="fas fa-code"></i>
           </button>
         </div>
       </div>
@@ -219,8 +239,19 @@
 
 <!-- MDB -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <!-- Custom scripts -->
 <script type="text/javascript">
+  $(window).on('load', function () {
+    setTimeout(function () {
+      $(".loader-page").css({
+        visibility: "hidden",
+        opacity: "0"
+      })
+    }, 2000);
+
+  });
 </script>
 
 </html>
