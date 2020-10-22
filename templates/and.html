@@ -257,14 +257,14 @@
         <div class="modal-body">
           <div class="row">
               <div class="col-sm">
-                <img src="{{ url_for('static', filename='img/perceptron.webp') }}" class="img-fluid rounded"
+                <img src="{{ url_for('static', filename='img/compuerta_and.png') }}" class="img-fluid rounded"
                   style="width: 100%; height: 350px" alt="...">
               </div>
               <div class="col-sm">
                 <table class="table">
       <thead>
         <tr>
-          <th scope="col"></th>
+          <th scope="col" ></th>
           <th scope="col">Patrón</th>
           <th scope="col">X1</th>
           <th scope="col">X2</th>
@@ -274,7 +274,7 @@
       <tbody>
         {% for compu3 in compu_and3 %}
         <tr>
-          <td> <button type="button" class="btn btn-outline-success" style="display:none" id="{{ compu3.0 }}"><i class="fas fa-angle-double-right"></i></button> </td>
+          <td style="width:66px;max-width:66px;padding-top: 10px;padding-bottom: 10px;"> <button type="button" class="btn btn-outline-success" style="display:none" id="{{ compu3.0 }}"><i class="fas fa-angle-double-right"></i></button> </td>
           <td>{{ compu3.0 |int() }}</td>
           <td>{{ compu3.1 |int() }}</td>
           <td>{{ compu3.2 |int() }}</td>
@@ -303,7 +303,7 @@
                 </select>
               </div>
               <div class="col-sm">
-                <button type="button" class="btn btn-outline-success" style="margin-top: 35px;" value="Comprobar" onclick="comprobar()">Comprobar</button>
+                <button type="button" class="btn btn-outline-success btn-block" style="margin-top: 35px;" value="Comprobar" onclick="comprobar()">Comprobar</button>
               </div>
               <div class="col-sm">
                 <label for="resultado" class="form-label">Resultado:</label>
