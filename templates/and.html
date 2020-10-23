@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Perceptron Simple</title>
-    <!-- Preloader 
+  <title>Perceptron AND</title>
+  <!-- Preloader 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/preloader.css') }}" /> -->
   <!-- MDB icon -->
   <link rel="icon" href="{{ url_for('static', filename='img/perce.ico') }}" type="image/x-icon" />
@@ -64,216 +64,223 @@
         </ul>
       </div>
     </div>
-  <nav>
-  
-  <div class="card-body">
-    <h5 class="card-title text-center">Perceptron AND</h5>
-    <p class="card-text text-right">
-      <a href="/and" type="button" class="btn btn-outline-success">Actualizar</a>
-      <button type="button" class="btn btn-outline-primary" onclick="exportTableToExcel('tblData')">Descargar</button>
-      <button type="button" class="btn btn-outline-info" data-toggle="modal"
-        data-target="#exampleModal4">Comprobar</button>
-    </p>
+    <nav>
 
-    <img src="{{ url_for('static', filename='img/Funcion.png') }}" class="img-fluid rounded"
-      style="width: 100%; height: 350px" alt="...">
+      <div class="card-body">
+        <div class="neu">
+          <h5 class="card-title text-center">Perceptron AND</h5>
+          <p class="card-text text-right">
+            <a href="/and" type="button" class="btn btn-outline-success"><i class="fas fa-undo-alt"></i></a>
+            <button type="button" class="btn btn-outline-primary" onclick="exportTableToExcel('tblData')"><i
+                class="fas fa-download"></i></button>
+            <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal4"><i
+                class="fas fa-search-plus"></i></button>
+          </p>
 
-    <div class="texto-encima" style="top: 350px; left: 30px;">Patrón: {{ compu_and2.0 |int() }}</div>
-    <div class="texto-encima" style="top: 203px; left: 370px;">X1: {{ compu_and2.1 |int() }}</div>
-    <div class="texto-encima" style="top: 433px; left: 370px;">X2: {{ compu_and2.2 |int() }}</div>
-    <div class="texto-encima" style="top: 220px; left: 510px;">P1: {{ compu_and2.3 |round(3) }}</div>
-    <div class="texto-encima" style="top: 410px; left: 510px;">P2: {{ compu_and2.4 |round(3) }}</div>
-    <div class="texto-encima" style="top: 280px; left: 820px;">D: {{ compu_and2.6 |int() }}</div>
-    <div class="texto-encima" style="top: 312px; left: 940px;">Y: {{ compu_and2.7 |round(3) }}</div>
-    <div class="texto-encima" style="top: 190px; left: 700px;;">F (x): {{ compu_and2.8 |int() }}</div>
-    <div class="texto-encima" style="top: 450px; left: 690px;">n: {{ compu_and2.9 |round(3) }}</div>
-    <div class="texto-encima" style="top: 370px; left: 30px;">Error: {{ compu_and2.10 |int() }}</div>
-    <div class="texto-encima" style="top: 390px; left: 30px;">Delta 1: {{ compu_and2.11 |round(3) }}</div>
-    <div class="texto-encima" style="top: 410px; left: 30px;">Delta 2: {{ compu_and2.12 |round(3) }}</div>
-    <div class="texto-encima" style="top: 410px; left: 690px;">Umbral: {{ compu_and2.15 |round(3) }}</div>
-    
-    <table class="table" id="tblData">
-      <thead>
-        <tr>
-          <th scope="col">Patron</th>
-          <th scope="col">X1</th>
-          <th scope="col">X2</th>
-          <th scope="col">P1</th>
-          <th scope="col">P2</th>
-          <th scope="col">u</th>
-          <th scope="col">d</th>
-          <th scope="col">y</th>
-          <th scope="col">F(x)</th>
-          <th scope="col">n</th>
-          <th scope="col">Error</th>
-          <th scope="col">Del 1</th>
-          <th scope="col">Del 2</th>
-          <th scope="col">Pe1</th>
-          <th scope="col">Pe2</th>
-          <th scope="col">Um</th>
-          <th scope="col">Ite</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for compu in compu_and %}
-        <tr>
+          <img src="{{ url_for('static', filename='img/Funcion.png') }}" class="img-fluid rounded"
+            style="width: 100%; height: 350px" alt="...">
 
-          <td> {{ compu.0 |int() }} </td>
-          <td>{{ compu.1 |int() }}</td>
-          <td>{{ compu.2 |int() }}</td>
-          <td>{{ compu.3 |round(3) }}</td>
-          <td>{{ compu.4 |round(3) }}</td>
-          <td>{{ compu.5 |round(3) }}</td>
-          <td>{{ compu.6 |int() }}</td>
-          <td>{{ compu.7 |round(3) }}</td>
-          <td>{{ compu.8 |int() }}</td>
-          <td>{{ compu.9 |round(3) }}</td>
-          <td>{{ compu.10 |int() }}</td>
-          <td>{{ compu.11 |round(3) }}</td>
-          <td>{{ compu.12 |round(3) }}</td>
-          <td>{{ compu.13 |round(3) }}</td>
-          <td>{{ compu.14 |round(3) }}</td>
-          <td>{{ compu.15 |round(3) }}</td>
-          <td>{{ compu.16 |int() }}</td>
-        </tr>
-        {% endfor %}
-
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Comprobar Perceptron Unicapa Compuerta AND</h5>
-
+          <div class="form-control texto-encima" style="top: 330px; left: 30px;">Patrón: {{ compu_and2.0 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 203px; left: 360px;">X1: {{ compu_and2.1 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 437px; left: 360px;">X2: {{ compu_and2.2 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 215px; left: 510px;">P1: {{ compu_and2.3 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 430px; left: 510px;">P2: {{ compu_and2.4 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 280px; left: 820px;">D: {{ compu_and2.6 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 322px; left: 940px;">Y: {{ compu_and2.7 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 190px; left: 700px;;">F (x): {{ compu_and2.8 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 460px; left: 690px;">n: {{ compu_and2.9 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 370px; left: 30px;">Error: {{ compu_and2.10 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 410px; left: 30px;">Delta 1: {{ compu_and2.11 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 450px; left: 30px;">Delta 2: {{ compu_and2.12 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 420px; left: 690px;">Umbral: {{ compu_and2.15 |round(3) }}</div>
         </div>
-        <div class="modal-body">
-          <div class="row">
-              <div class="col-sm">
-                <img src="{{ url_for('static', filename='img/compuerta_and.png') }}" class="img-fluid rounded"
-                  style="width: 100%; height: 350px" alt="...">
-              </div>
-              <div class="col-sm">
-                <table class="table">
-      <thead>
-        <tr>
-          <th scope="col" ></th>
-          <th scope="col">Patrón</th>
-          <th scope="col">X1</th>
-          <th scope="col">X2</th>
-          <th scope="col">D</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for compu3 in compu_and3 %}
-        <tr>
-          <td style="width:66px;max-width:66px;padding-top: 10px;padding-bottom: 10px;"> <button type="button" class="btn btn-outline-success" style="display:none" id="{{ compu3.0 }}"><i class="fas fa-angle-double-right"></i></button> </td>
-          <td>{{ compu3.0 |int() }}</td>
-          <td>{{ compu3.1 |int() }}</td>
-          <td>{{ compu3.2 |int() }}</td>
-          <td>{{ compu3.3 |int() }}</td>
-        </tr>
-         {% endfor %} 
 
-      </tbody>
-    </table>
+        <div class="mx-auto" style="width: 200px;height: 20px;"></div>
+
+        <table class="table" id="tblData">
+          <thead>
+            <tr>
+              <th scope="col">Patron</th>
+              <th scope="col">X1</th>
+              <th scope="col">X2</th>
+              <th scope="col">P1</th>
+              <th scope="col">P2</th>
+              <th scope="col">u</th>
+              <th scope="col">d</th>
+              <th scope="col">y</th>
+              <th scope="col">F(x)</th>
+              <th scope="col">n</th>
+              <th scope="col">Error</th>
+              <th scope="col">Del 1</th>
+              <th scope="col">Del 2</th>
+              <th scope="col">Pe1</th>
+              <th scope="col">Pe2</th>
+              <th scope="col">Um</th>
+              <th scope="col">Ite</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for compu in compu_and %}
+            <tr>
+
+              <td> {{ compu.0 |int() }} </td>
+              <td>{{ compu.1 |int() }}</td>
+              <td>{{ compu.2 |int() }}</td>
+              <td>{{ compu.3 |round(3) }}</td>
+              <td>{{ compu.4 |round(3) }}</td>
+              <td>{{ compu.5 |round(3) }}</td>
+              <td>{{ compu.6 |int() }}</td>
+              <td>{{ compu.7 |round(3) }}</td>
+              <td>{{ compu.8 |int() }}</td>
+              <td>{{ compu.9 |round(3) }}</td>
+              <td>{{ compu.10 |int() }}</td>
+              <td>{{ compu.11 |round(3) }}</td>
+              <td>{{ compu.12 |round(3) }}</td>
+              <td>{{ compu.13 |round(3) }}</td>
+              <td>{{ compu.14 |round(3) }}</td>
+              <td>{{ compu.15 |round(3) }}</td>
+              <td>{{ compu.16 |int() }}</td>
+            </tr>
+            {% endfor %}
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Comprobar Perceptron Unicapa Compuerta AND</h5>
+
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm">
+                  <img src="{{ url_for('static', filename='img/compuerta_and.png') }}" class="img-fluid rounded"
+                    style="width: 100%; height: 350px" alt="...">
+                </div>
+                <div class="col-sm">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Patrón</th>
+                        <th scope="col">X1</th>
+                        <th scope="col">X2</th>
+                        <th scope="col">D</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for compu3 in compu_and3 %}
+                      <tr>
+                        <td style="width:66px;max-width:66px;padding-top: 10px;padding-bottom: 10px;"> <button
+                            type="button" class="btn btn-outline-success" style="display:none" id="{{ compu3.0 }}"><i
+                              class="fas fa-angle-double-right"></i></button> </td>
+                        <td>{{ compu3.0 |int() }}</td>
+                        <td>{{ compu3.1 |int() }}</td>
+                        <td>{{ compu3.2 |int() }}</td>
+                        <td>{{ compu3.3 |int() }}</td>
+                      </tr>
+                      {% endfor %}
+
+                    </tbody>
+                  </table>
+                </div>
               </div>
-          </div>
-          <div class="container">
-            <div class="row" style="margin-top: 20px;">
-              <div class="col-sm">
-                <label for="x1" class="form-label">X1:</label>
-                <select id="x1" class="form-select">
-                  <option>0</option>
-                  <option>1</option>
-                </select>
+              <div class="container">
+                <div class="row" style="margin-top: 20px;">
+                  <div class="col-sm">
+                    <label for="x1" class="form-label">X1:</label>
+                    <select id="x1" class="form-select">
+                      <option>0</option>
+                      <option>1</option>
+                    </select>
+                  </div>
+                  <div class="col-sm">
+                    <label for="x2" class="form-label">X2:</label>
+                    <select id="x2" class="form-select">
+                      <option>0</option>
+                      <option>1</option>
+                    </select>
+                  </div>
+                  <div class="col-sm">
+                    <button type="button" class="btn btn-outline-success btn-block" style="margin-top: 35px;"
+                      value="Comprobar" onclick="comprobar()">Comprobar</button>
+                  </div>
+                  <div class="col-sm">
+                    <label for="resultado" class="form-label">Resultado:</label>
+                    <input type="text" class="form-control" id="resultado" readonly>
+                  </div>
+                </div>
               </div>
-              <div class="col-sm">
-                <label for="x2" class="form-label">X2:</label>
-                <select id="x2" class="form-select">
-                  <option>0</option>
-                  <option>1</option>
-                </select>
-              </div>
-              <div class="col-sm">
-                <button type="button" class="btn btn-outline-success btn-block" style="margin-top: 35px;" value="Comprobar" onclick="comprobar()">Comprobar</button>
-              </div>
-              <div class="col-sm">
-                <label for="resultado" class="form-label">Resultado:</label>
-                <input type="text" class="form-control" id="resultado" readonly>
-              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
-    </div>
-  </div>
 
 </body>
 
 <!-- MDB -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
 
 <!-- Custom scripts -->
 <script type="text/javascript">
+  function exportTableToExcel(tableID, filename = '') {
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
 
-  function exportTableToExcel(tableID, filename = ''){
-      var downloadLink;
-      var dataType = 'application/vnd.ms-excel';
-      var tableSelect = document.getElementById(tableID);
-      var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-      
-      filename = filename?filename+'.xls':'perceptrón_simple.xls';
+    filename = filename ? filename + '.xls' : 'perceptrón_simple.xls';
 
-      downloadLink = document.createElement("a");
-      
-      document.body.appendChild(downloadLink);
-      
-      if(navigator.msSaveOrOpenBlob){
-          var blob = new Blob(['ufeff', tableHTML], {
-              type: dataType
-          });
-          navigator.msSaveOrOpenBlob( blob, filename);
-      }else{
-          downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-      
-          downloadLink.download = filename;
+    downloadLink = document.createElement("a");
 
-          downloadLink.click();
-      }
+    document.body.appendChild(downloadLink);
+
+    if (navigator.msSaveOrOpenBlob) {
+      var blob = new Blob(['ufeff', tableHTML], {
+        type: dataType
+      });
+      navigator.msSaveOrOpenBlob(blob, filename);
+    } else {
+      downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+      downloadLink.download = filename;
+
+      downloadLink.click();
+    }
   }
 
-  function comprobar(){
+  function comprobar() {
     X1 = document.getElementById("x1").value;
     X2 = document.getElementById("x2").value;
 
-    if(X1=="0" && X2=="0"){
+    if (X1 == "0" && X2 == "0") {
       document.getElementById("resultado").value = "0";
       document.getElementById("1").style.display = "inline";
       document.getElementById("2").style.display = "none";
       document.getElementById("3").style.display = "none";
       document.getElementById("4").style.display = "none";
-    }else if((X1=="0" && X2=="1")){
+    } else if ((X1 == "0" && X2 == "1")) {
       document.getElementById("resultado").value = "0";
       document.getElementById("1").style.display = "none";
       document.getElementById("2").style.display = "inline";
       document.getElementById("3").style.display = "none";
       document.getElementById("4").style.display = "none";
-    }else if((X1=="1" && X2=="0")){
+    } else if ((X1 == "1" && X2 == "0")) {
       document.getElementById("resultado").value = "0";
       document.getElementById("1").style.display = "none";
       document.getElementById("2").style.display = "none";
       document.getElementById("3").style.display = "inline";
       document.getElementById("4").style.display = "none";
-    }else if((X1=="1" && X2=="1")){
+    } else if ((X1 == "1" && X2 == "1")) {
       document.getElementById("resultado").value = "1";
       document.getElementById("1").style.display = "none";
       document.getElementById("2").style.display = "none";
@@ -296,7 +303,7 @@
 </script>
 
 <script type="text/javascript">
-  
+
 </script>
 
 </html>

@@ -79,11 +79,22 @@
     position: absolute;
     top: 10px;
     left: 10px;
+    width:auto;
+    /* border-color: #0B56DE;
+    border: 1.8px solid #0B56DE; */
+    border: 0px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  7px 7px 14px #e6e6e6, 
+                -7px -7px 14px #ffffff;
 }
 
-.centrado{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+  .neu{
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow:  30px 30px 60px #e6e6e6, 
+              -30px -30px 60px #ffffff;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  }
