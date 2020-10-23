@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <title>Perceptron Simple</title>
-    <!-- Preloader -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/preloader.css') }}" />
+    <!-- Preloader 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/preloader.css') }}" /> -->
   <!-- MDB icon -->
   <link rel="icon" href="{{ url_for('static', filename='img/perce.ico') }}" type="image/x-icon" />
   <!-- Font Awesome -->
@@ -67,7 +67,7 @@
   <nav>
   
   <div class="card-body">
-    <h5 class="card-title text-center">Perceptron Unicapa</h5>
+    <h5 class="card-title text-center">Perceptron AND</h5>
     <p class="card-text text-right">
       <a href="/and" type="button" class="btn btn-outline-success">Actualizar</a>
       <button type="button" class="btn btn-outline-primary" onclick="exportTableToExcel('tblData')">Descargar</button>
@@ -75,126 +75,22 @@
         data-target="#exampleModal4">Comprobar</button>
     </p>
 
-    <img src="{{ url_for('static', filename='img/perceptron.webp') }}" class="img-fluid rounded"
+    <img src="{{ url_for('static', filename='img/Funcion.png') }}" class="img-fluid rounded"
       style="width: 100%; height: 350px" alt="...">
 
-    <div class="mx-auto" style="width: 200px;height: 20px;"></div>
-
-    <div class="row">
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.0 |int() }}" readonly/>
-          <label class="form-label" for="typeText">Patrón</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.1|int() }}" readonly/>
-          <label class="form-label" for="typeText">X1</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.2|int() }}" readonly/>
-          <label class="form-label" for="typeText">X2</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.3|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">P1</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.4|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">P2</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.5|round(3)}}" readonly/>
-          <label class="form-label" for="typeText">U</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.6|int() }}" readonly/>
-          <label class="form-label" for="typeText">D</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.7|round(3)}}" readonly/>
-          <label class="form-label" for="typeText">Y</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.8|int() }}" readonly/>
-          <label class="form-label" for="typeText">F(x)</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.9|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">n</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.10|int() }}" readonly/>
-          <label class="form-label" for="typeText">Error</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.11|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">Del1</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.12|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">Del2</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.13|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">Pe1</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.14|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">Pe2</label>
-        </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="form-outline">
-          <input type="text" id="typeText" class="form-control" value="{{ compu_and2.15|round(3) }}" readonly/>
-          <label class="form-label" for="typeText">Um</label>
-        </div>
-      </div>
-
-    </div>
+    <div class="texto-encima" style="top: 350px; left: 30px;">Patrón: {{ compu_and2.0 |int() }}</div>
+    <div class="texto-encima" style="top: 203px; left: 370px;">X1: {{ compu_and2.1 |int() }}</div>
+    <div class="texto-encima" style="top: 433px; left: 370px;">X2: {{ compu_and2.2 |int() }}</div>
+    <div class="texto-encima" style="top: 220px; left: 510px;">P1: {{ compu_and2.3 |round(3) }}</div>
+    <div class="texto-encima" style="top: 410px; left: 510px;">P2: {{ compu_and2.4 |round(3) }}</div>
+    <div class="texto-encima" style="top: 280px; left: 820px;">D: {{ compu_and2.6 |int() }}</div>
+    <div class="texto-encima" style="top: 312px; left: 940px;">Y: {{ compu_and2.7 |round(3) }}</div>
+    <div class="texto-encima" style="top: 190px; left: 700px;;">F (x): {{ compu_and2.8 |int() }}</div>
+    <div class="texto-encima" style="top: 450px; left: 690px;">n: {{ compu_and2.9 |round(3) }}</div>
+    <div class="texto-encima" style="top: 370px; left: 30px;">Error: {{ compu_and2.10 |int() }}</div>
+    <div class="texto-encima" style="top: 390px; left: 30px;">Delta 1: {{ compu_and2.11 |round(3) }}</div>
+    <div class="texto-encima" style="top: 410px; left: 30px;">Delta 2: {{ compu_and2.12 |round(3) }}</div>
+    <div class="texto-encima" style="top: 410px; left: 690px;">Umbral: {{ compu_and2.15 |round(3) }}</div>
     
     <table class="table" id="tblData">
       <thead>

@@ -68,3 +68,22 @@
     padding-left: 3px;
     padding-right: 3px;
   }
+
+  .contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
