@@ -95,57 +95,58 @@
                     <div class="form-control texto-encima" style="top: 420px; left: 690px;">Umbral: {{ compu_or2.15 |round(3) }}</div>
                 </div>
 
-                <div class="mx-auto" style="width: 200px;height: 20px;"></div>
+                <div class="mx-auto" style="width: 200px;height: 30px;"></div>
 
+                <div class="neu">
+                    <table class="table" id="tblData">
+                        <thead>
+                            <tr>
+                                <th scope="col">Patron</th>
+                                <th scope="col">X1</th>
+                                <th scope="col">X2</th>
+                                <th scope="col">P1</th>
+                                <th scope="col">P2</th>
+                                <th scope="col">u</th>
+                                <th scope="col">d</th>
+                                <th scope="col">y</th>
+                                <th scope="col">F(x)</th>
+                                <th scope="col">n</th>
+                                <th scope="col">Error</th>
+                                <th scope="col">Del 1</th>
+                                <th scope="col">Del 2</th>
+                                <th scope="col">Pe1</th>
+                                <th scope="col">Pe2</th>
+                                <th scope="col">Um</th>
+                                <th scope="col">Ite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for compu in compu_or %}
+                            <tr>
 
-                <table class="table" id="tblData">
-                    <thead>
-                        <tr>
-                            <th scope="col">Patron</th>
-                            <th scope="col">X1</th>
-                            <th scope="col">X2</th>
-                            <th scope="col">P1</th>
-                            <th scope="col">P2</th>
-                            <th scope="col">u</th>
-                            <th scope="col">d</th>
-                            <th scope="col">y</th>
-                            <th scope="col">F(x)</th>
-                            <th scope="col">n</th>
-                            <th scope="col">Error</th>
-                            <th scope="col">Del 1</th>
-                            <th scope="col">Del 2</th>
-                            <th scope="col">Pe1</th>
-                            <th scope="col">Pe2</th>
-                            <th scope="col">Um</th>
-                            <th scope="col">Ite</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for compu in compu_or %}
-                        <tr>
+                                <td> {{ compu.0 |int() }} </td>
+                                <td>{{ compu.1 |int() }}</td>
+                                <td>{{ compu.2 |int() }}</td>
+                                <td>{{ compu.3 |round(3) }}</td>
+                                <td>{{ compu.4 |round(3) }}</td>
+                                <td>{{ compu.5 |round(3) }}</td>
+                                <td>{{ compu.6 |int() }}</td>
+                                <td>{{ compu.7 |round(3) }}</td>
+                                <td>{{ compu.8 |int() }}</td>
+                                <td>{{ compu.9 |round(3) }}</td>
+                                <td>{{ compu.10 |int() }}</td>
+                                <td>{{ compu.11 |round(3) }}</td>
+                                <td>{{ compu.12 |round(3) }}</td>
+                                <td>{{ compu.13 |round(3) }}</td>
+                                <td>{{ compu.14 |round(3) }}</td>
+                                <td>{{ compu.15 |round(3) }}</td>
+                                <td>{{ compu.16 |int() }}</td>
+                            </tr>
+                            {% endfor %}
 
-                            <td> {{ compu.0 |int() }} </td>
-                            <td>{{ compu.1 |int() }}</td>
-                            <td>{{ compu.2 |int() }}</td>
-                            <td>{{ compu.3 |round(3) }}</td>
-                            <td>{{ compu.4 |round(3) }}</td>
-                            <td>{{ compu.5 |round(3) }}</td>
-                            <td>{{ compu.6 |int() }}</td>
-                            <td>{{ compu.7 |round(3) }}</td>
-                            <td>{{ compu.8 |int() }}</td>
-                            <td>{{ compu.9 |round(3) }}</td>
-                            <td>{{ compu.10 |int() }}</td>
-                            <td>{{ compu.11 |round(3) }}</td>
-                            <td>{{ compu.12 |round(3) }}</td>
-                            <td>{{ compu.13 |round(3) }}</td>
-                            <td>{{ compu.14 |round(3) }}</td>
-                            <td>{{ compu.15 |round(3) }}</td>
-                            <td>{{ compu.16 |int() }}</td>
-                        </tr>
-                        {% endfor %}
-
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Modal -->
