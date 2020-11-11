@@ -70,8 +70,8 @@
                 <div class="neu">
                     <h5 class="card-title text-center">Perceptron Compuerta OR</h5>
                     <p class="card-text text-right">
-                        <a href="/ort" type="button" class="btn btn-outline-secondary"><i class="fas fa-exchange-alt"></i></a>
-                        <a href="/or" type="button" class="btn btn-outline-success"><i class="fas fa-undo-alt"></i></a>
+                        <a href="/or" type="button" class="btn btn-outline-secondary"><i class="fas fa-exchange-alt"></i></a>
+                        <a href="/ort" type="button" class="btn btn-outline-success"><i class="fas fa-undo-alt"></i></a>
                         <button type="button" class="btn btn-outline-primary" onclick="exportTableToExcel('tblData')"><i
                                 class="fas fa-download"></i></button>
                         <button type="button" class="btn btn-outline-info" data-toggle="modal"
@@ -84,16 +84,19 @@
                     <div class="form-control texto-encima" style="top: 330px; left: 30px;">Patrón: {{ compu_or2.0 |int() }}</div>
           <div class="form-control texto-encima" style="top: 203px; left: 360px;">X1: {{ compu_or2.1 |int() }}</div>
           <div class="form-control texto-encima" style="top: 437px; left: 360px;">X2: {{ compu_or2.2 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 215px; left: 510px;" title="El peso P1 (W1) es un valor aleatorio pequeño.">P1: {{ compu_or2.3 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 430px; left: 510px;" title="El peso P2 (W2) es un valor aleatorio pequeño.">P2: {{ compu_or2.4 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 280px; left: 820px;" title="El valor de salida en la compuerta OR.">D: {{ compu_or2.6 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 322px; left: 940px;" title="El valor calculado según la función escalón.">Y: {{ compu_or2.7 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 190px; left: 700px;;" title="">F (x): {{ compu_or2.8 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 460px; left: 690px;" title="Coeficiente de Aprendizaje.">η: {{ compu_or2.9 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 370px; left: 30px;" title="El valor de error.">Error: {{ compu_or2.10 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 410px; left: 30px;" title="Delta 1.">Delta 1: {{ compu_or2.11 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 2.">Delta 2: {{ compu_or2.12 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 420px; left: 690px;" title="Es el nuevo valor del umbral.">Ø: {{ compu_or2.15 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 437px; left: 360px;">X3: {{ compu_or2.3 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 215px; left: 510px;" title="El peso P1 (W1) es un valor aleatorio pequeño.">P1: {{ compu_or2.4 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 430px; left: 510px;" title="El peso P2 (W2) es un valor aleatorio pequeño.">P2: {{ compu_or2.5 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 430px; left: 510px;" title="El peso P3 (W3) es un valor aleatorio pequeño.">P2: {{ compu_or2.6 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 280px; left: 820px;" title="El valor de salida en la compuerta OR.">D: {{ compu_or2.8 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 322px; left: 940px;" title="El valor calculado según la función escalón.">Y: {{ compu_or2.9 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 190px; left: 700px;;" title="">F (x): {{ compu_or2.10 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 460px; left: 690px;" title="Coeficiente de Aprendizaje.">η: {{ compu_or2.11 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 370px; left: 30px;" title="El valor de error.">Error: {{ compu_or2.12 |int() }}</div>
+          <div class="form-control texto-encima" style="top: 410px; left: 30px;" title="Delta 1.">Delta 1: {{ compu_or2.13 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 2.">Delta 2: {{ compu_or2.14 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 2.">Delta 2: {{ compu_or2.15 |round(3) }}</div>
+          <div class="form-control texto-encima" style="top: 420px; left: 690px;" title="Es el nuevo valor del umbral.">Ø: {{ compu_or2.18 |round(3) }}</div>
                 </div>
 
                 <div class="mx-auto" style="width: 200px;height: 30px;"></div>
@@ -105,8 +108,10 @@
                                 <th scope="col">Patron</th>
                                 <th scope="col">X1</th>
                                 <th scope="col">X2</th>
+                                <th scope="col">X3</th>
                                 <th scope="col" title="El peso P1 (W1) es un valor aleatorio pequeño.">P1</th>
                                 <th scope="col" title="El peso P2 (W2) es un valor aleatorio pequeño.">P2</th>
+                                <th scope="col" title="El peso P2 (W2) es un valor aleatorio pequeño.">P3</th>
                                 <th scope="col" title="Es el umbral.">Ø</th>
                                 <th scope="col" title="El valor de salida en la compuerta OR.">D</th>
                                 <th scope="col" title="El valor calculado según la función escalón.">Y</th>
@@ -115,8 +120,10 @@
                                 <th scope="col" title="El valor de error.">Error</th>
                                 <th scope="col" title="Delta 1.">△1</th>
                                 <th scope="col" title="Delta 2.">△2</th>
+                                <th scope="col" title="Delta 2.">△3</th>
                                 <th scope="col" title="Es el nuevo valor del peso P1.">P1+</th>
                                 <th scope="col" title="Es el nuevo valor del peso P2.">P2+</th>
+                                <th scope="col" title="Es el nuevo valor del peso P2.">P3+</th>
                                 <th scope="col" title="Es el nuevo valor del umbral.">Øi</th>
                                 <th scope="col">Ite</th>
                             </tr>
@@ -128,20 +135,24 @@
                                 <td> {{ compu.0 |int() }} </td>
                                 <td>{{ compu.1 |int() }}</td>
                                 <td>{{ compu.2 |int() }}</td>
-                                <td>{{ compu.3 |round(3) }}</td>
+                                <td>{{ compu.3 |int() }}</td>
                                 <td>{{ compu.4 |round(3) }}</td>
                                 <td>{{ compu.5 |round(3) }}</td>
-                                <td>{{ compu.6 |int() }}</td>
-                                <td>{{ compu.7 |round(3) }}</td>
-                                <td>{{ compu.8 |int() }}</td>
-                                <td>{{ compu.9 |round(3) }}</td>
-                                <td>{{ compu.10 |int() }}</td>
-                                <td>{{ compu.11 |round(3) }}</td>
+                                <td>{{ compu.6 |round(3) }}</td>
+                                <td>{{ compu.7 |int() }}</td>
+                                <td>{{ compu.8 |round(3) }}</td>
+                                <td>{{ compu.9 |int() }}</td>
+                                <td>{{ compu.10 |round(3) }}</td>
+                                <td>{{ compu.11 |int() }}</td>
                                 <td>{{ compu.12 |round(3) }}</td>
                                 <td>{{ compu.13 |round(3) }}</td>
                                 <td>{{ compu.14 |round(3) }}</td>
                                 <td>{{ compu.15 |round(3) }}</td>
-                                <td>{{ compu.16 |int() }}</td>
+                                <td>{{ compu.16 |round(3) }}</td>
+                                <td>{{ compu.17 |round(3) }}</td>
+                                <td>{{ compu.18 |round(3) }}</td>
+                                <td>{{ compu.19 |round(3) }}</td>
+                                <td>{{ compu.20 |int() }}</td>
                             </tr>
                             {% endfor %}
 
@@ -174,6 +185,7 @@
                                                 <th scope="col">Patrón</th>
                                                 <th scope="col">X1</th>
                                                 <th scope="col">X2</th>
+                                                <th scope="col">X3</th>
                                                 <th scope="col">D</th>
                                             </tr>
                                         </thead>
@@ -189,6 +201,7 @@
                                                 <td>{{ compu3.1 |int() }}</td>
                                                 <td>{{ compu3.2 |int() }}</td>
                                                 <td>{{ compu3.3 |int() }}</td>
+                                                <td>{{ compu3.4 |int() }}</td>
                                             </tr>
                                             {% endfor %}
 
@@ -208,6 +221,13 @@
                                     <div class="col-sm">
                                         <label for="x2" class="form-label">X2:</label>
                                         <select id="x2" class="form-select">
+                                            <option>0</option>
+                                            <option>1</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label for="x3" class="form-label">X3:</label>
+                                        <select id="x3" class="form-select">
                                             <option>0</option>
                                             <option>1</option>
                                         </select>
@@ -269,31 +289,89 @@
     function comprobar() {
         X1 = document.getElementById("x1").value;
         X2 = document.getElementById("x2").value;
+        X3 = document.getElementById("x3").value;
 
-        if (X1 == "0" && X2 == "0") {
+         if (X1 == "0" && X2 == "0" && X3=="0") {
             document.getElementById("resultado").value = "0";
             document.getElementById("1").style.display = "inline";
             document.getElementById("2").style.display = "none";
             document.getElementById("3").style.display = "none";
             document.getElementById("4").style.display = "none";
-        } else if ((X1 == "0" && X2 == "1")) {
+            document.getElementById("5").style.display = "none";
+            document.getElementById("6").style.display = "none";
+            document.getElementById("7").style.display = "none";
+            document.getElementById("8").style.display = "none";
+        }else if ((X1 == "0" && X2=='0' && X3 == "1" )) {
             document.getElementById("resultado").value = "1";
             document.getElementById("1").style.display = "none";
             document.getElementById("2").style.display = "inline";
             document.getElementById("3").style.display = "none";
             document.getElementById("4").style.display = "none";
-        } else if ((X1 == "1" && X2 == "0")) {
+             document.getElementById("5").style.display = "none";
+            document.getElementById("6").style.display = "none";
+            document.getElementById("7").style.display = "none";
+            document.getElementById("8").style.display = "none";
+        }else if ((X1 == "0" && X2 == "1" && X3=="0")) {
             document.getElementById("resultado").value = "1";
             document.getElementById("1").style.display = "none";
             document.getElementById("2").style.display = "none";
             document.getElementById("3").style.display = "inline";
             document.getElementById("4").style.display = "none";
-        } else if ((X1 == "1" && X2 == "1")) {
+             document.getElementById("5").style.display = "none";
+            document.getElementById("6").style.display = "none";
+            document.getElementById("7").style.display = "none";
+            document.getElementById("8").style.display = "none";
+        }else if ((X1 == "0" && X2 == "1" && X3=="1")) {
             document.getElementById("resultado").value = "1";
             document.getElementById("1").style.display = "none";
             document.getElementById("2").style.display = "none";
             document.getElementById("3").style.display = "none";
             document.getElementById("4").style.display = "inline";
+            document.getElementById("5").style.display = "none";
+            document.getElementById("6").style.display = "none";
+            document.getElementById("7").style.display = "none";
+            document.getElementById("8").style.display = "none";
+        }else if ((X1 == "1" && X2 == "0" && X3=="0")) {
+            document.getElementById("resultado").value = "1";
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("4").style.display = "none";
+            document.getElementById("5").style.display = "inline";
+            document.getElementById("6").style.display = "none";
+            document.getElementById("7").style.display = "none";
+            document.getElementById("8").style.display = "none";
+        }else if ((X1 == "1" && X2 == "0" && X3=="1")) {
+            document.getElementById("resultado").value = "1";
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("4").style.display = "none";
+             document.getElementById("5").style.display = "none";
+            document.getElementById("6").style.display = "inline";
+            document.getElementById("7").style.display = "none";
+            document.getElementById("8").style.display = "none";
+        }
+        else if ((X1 == "1" && X2 == "1" && X3=="0")) {
+            document.getElementById("resultado").value = "1";
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("4").style.display = "none";
+             document.getElementById("5").style.display = "none";
+            document.getElementById("6").style.display = "none";
+            document.getElementById("7").style.display = "inline";
+            document.getElementById("8").style.display = "none";
+        }else if ((X1 == "1" && X2 == "1" && X3=="1")) {
+            document.getElementById("resultado").value = "1";
+            document.getElementById("1").style.display = "none";
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("4").style.display = "none";
+             document.getElementById("5").style.display = "none";
+            document.getElementById("6").style.display = "none";
+            document.getElementById("7").style.display = "none";
+            document.getElementById("8").style.display = "inline";
         }
     }
 </script>
