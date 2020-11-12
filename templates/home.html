@@ -87,7 +87,8 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">AND</h5>
-                <a href="/" class="btn btn-outline-primary btn-lg btn-block sombra-btn" data-toggle="modal" data-target="#modaland">GENERAR</a>
+                <a href="/" class="btn btn-outline-primary btn-lg btn-block sombra-btn" data-toggle="modal"
+                  data-target="#modaland">GENERAR</a>
               </div>
             </div>
           </div>
@@ -101,28 +102,30 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">OR</h5>
-                <a href="/or" class="btn btn-outline-primary btn-lg btn-block sombra-btn" data-toggle="modal" data-target="#modalor">GENERAR</a>
+                <a href="/or" class="btn btn-outline-success btn-lg btn-block sombra-btn" data-toggle="modal"
+                  data-target="#modalor">GENERAR</a>
               </div>
             </div>
           </div>
           <div class="col-sm">
             <div class="card sombra">
               <div class="bg-image hover-overlay ripple" data-ripple-color="light">
-                <img src="{{ url_for('static', filename='img/com_or.png') }}" class="img-fluid" />
+                <img src="{{ url_for('static', filename='img/com_nand.png') }}" class="img-fluid" />
                 <a href="/or">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                 </a>
               </div>
               <div class="card-body">
                 <h5 class="card-title">NAND</h5>
-                <a href="/" class="btn btn-outline-primary btn-lg btn-block sombra-btn" data-toggle="modal" data-target="#modalnan">GENERAR</a>
+                <a href="/" class="btn btn-outline-danger btn-lg btn-block sombra-btn" data-toggle="modal"
+                  data-target="#modalnan">GENERAR</a>
               </div>
             </div>
           </div>
           <div class="col-sm">
             <div class="card sombra">
               <div class="bg-image hover-overlay ripple" data-ripple-color="light">
-                <img src="{{ url_for('static', filename='img/com_xor.png') }}" class="img-fluid" />
+                <img src="{{ url_for('static', filename='img/com_nor.png') }}" class="img-fluid" />
                 <a href="/and">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                 </a>
@@ -130,7 +133,8 @@
               <div class="card-body">
                 <h5 class="card-title">NOR</h5>
                 <p class="card-text">
-                  <a href="/" class="btn btn-outline-primary btn-lg btn-block sombra-btn" data-toggle="modal" data-target="#modalnor">GENERAR</a>
+                  <a href="/" class="btn btn-outline-warning btn-lg btn-block sombra-btn" data-toggle="modal"
+                    data-target="#modalnor">GENERAR</a>
               </div>
             </div>
           </div>
@@ -157,115 +161,73 @@
         </div>
       </div>
 
-      <!-- Modal -->
+      <!-- Modal AND-->
+      
+
       <div class="modal fade" id="modaland" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-dialog modal-dialog-centered text-center">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Entradas compuerta and</h5>
-
+              <h5 class="modal-title" id="exampleModalLabel">COMPUERTA AND</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <img src="{{ url_for('static', filename='img/com_and.png') }}" class="img-fluid rounded"
-                style="width: 100%; height: 350px" alt="...">
-              <div class="container">
-                <div class="row" style="margin-top: 20px;">
-                  <div class="col-sm">
-                    <a class="btn btn-outline-success" href="/and" style="margin-top: 35px;"
-                      >1 entrada</a>
-                      <a class="btn btn-outline-success" href="/and2" style="margin-top: 35px;"
-                      >2 entrada</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+              <a class="btn btn-outline-primary" href="/and">2 Entradas</a>
+              <a class="btn btn-outline-primary" href="/and2">3 Entradas</a>
             </div>
           </div>
         </div>
       </div>
 
+
+      <!-- Modal OR-->
       <div class="modal fade" id="modalor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-dialog modal-dialog-centered text-center">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Entradas compuerta or</h5>
-
+              <h5 class="modal-title" id="exampleModalLabel">COMPUERTA OR</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <img src="{{ url_for('static', filename='img/com_or.png') }}" class="img-fluid rounded"
-                style="width: 100%; height: 350px" alt="...">
-              <div class="container">
-                <div class="row" style="margin-top: 20px;">
-                  <div class="col-sm">
-                    <a class="btn btn-outline-success" href="/or" style="margin-top: 35px;"
-                      >1 entrada</a>
-                      <a class="btn btn-outline-success" href="/ort" style="margin-top: 35px;"
-                      >2 entrada</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+              <a class="btn btn-outline-success" href="/or">2 Entradas</a>
+              <a class="btn btn-outline-success" href="/or2">3 Entradas</a>
             </div>
           </div>
         </div>
       </div>
 
-<div class="modal fade" id="modalnan" tabindex="-1" aria-labelledby="modalnanLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <!-- Modal NAND-->
+      <div class="modal fade" id="modalnan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered text-center">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modalnanLabel">Entradas compuerta nan</h5>
-
+              <h5 class="modal-title" id="exampleModalLabel">COMPUERTA NAND</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <img src="{{ url_for('static', filename='img/com_or.png') }}" class="img-fluid rounded"
-                style="width: 100%; height: 350px" alt="...">
-              <div class="container">
-                <div class="row" style="margin-top: 20px;">
-                  <div class="col-sm">
-                    <a class="btn btn-outline-success" href="/nan" style="margin-top: 35px;"
-                     >1 entrada</a>
-                      <a class="btn btn-outline-success" href="/nan2" style="margin-top: 35px;"
-                      >2 entrada</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+              <a class="btn btn-outline-danger" href="/nan">2 Entradas</a>
+              <a class="btn btn-outline-danger" href="/nan2">3 Entradas</a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Modal NOR-->
       <div class="modal fade" id="modalnor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-dialog modal-dialog-centered text-center">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Entradas compuerta nor</h5>
-
+              <h5 class="modal-title" id="exampleModalLabel">COMPUERTA NOR</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <img src="{{ url_for('static', filename='img/com_or.png') }}" class="img-fluid rounded"
-                style="width: 100%; height: 350px" alt="...">
-              <div class="container">
-                <div class="row" style="margin-top: 20px;">
-                  <div class="col-sm">
-                    <a class="btn btn-outline-success" href="/nor" style="margin-top: 35px;">1 entrada</a>
-                      <a class="btn btn-outline-success" href="/nor2" style="margin-top: 35px;">2 entrada</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+              <a class="btn btn-outline-warning" href="/nor">2 Entradas</a>
+              <a class="btn btn-outline-warning" href="/nor2">3 Entradas</a>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Modal -->
       <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-xl">
