@@ -170,8 +170,9 @@ def can3():
         
         cur.execute('INSERT INTO compuerta_an2 (Patron, x1, x2,x3, p1, p2,p3,u,d, y, fx,n,e,v1,v2,v3,pe1,pe2,pe3,um,it) VALUES (%s, %s, %s,%s,%s, %s, %s, %s, %s,%s,%s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s)',
         (pat, x1, x2,x3, p1, p2,p3,u,d, y, f,n,e,v1,v2,v3,pe1,pe2,pe3,um,t))
-        
+
         mysql.connection.commit()
+
         t += 1
         um_lis.append(um)
         return (t,  e, um)
@@ -266,7 +267,7 @@ def can3():
     data2 = cur2.fetchall()
     
     cur3 = mysql.connection.cursor()
-    cur3.execute('SELECT Patron, x1, x2,x3, d FROM compuerta_an2 ORDER BY it DESC, Patron ASC LIMIT 4')
+    cur3.execute('SELECT Patron, x1, x2,x3, d FROM compuerta_an2 ORDER BY it DESC, Patron ASC LIMIT 8')
     data3 = cur3.fetchall()
     return render_template('and2.html', compu_and = data, compu_and2 = data2[0], compu_and3 = data3)            
 
