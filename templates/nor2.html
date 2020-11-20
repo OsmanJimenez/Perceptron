@@ -83,7 +83,7 @@
             <img src="{{ url_for('static', filename='img/Funcion2.png') }}" class="img-fluid rounded"
                 style="width: 100%; height: 350px" alt="...">
 
-            <div class="form-control texto-encima" style="top: 330px; left: 30px;">Patrón:
+            <div class="form-control texto-encima" style="top: 290px; left: 30px;">Patrón:
                 {{ compu_nor2.0 |int() }}</div>
             <div class="form-control texto-encima" style="top: 203px; left: 360px;">X1:
                 {{ compu_nor2.1 |int() }}</div>
@@ -105,13 +105,13 @@
                 {{ compu_nor2.10 |int() }}</div>
             <div class="form-control texto-encima" style="top: 460px; left: 690px;"
                 title="Coeficiente de Aprendizaje.">η: {{ compu_nor2.11 |round(3) }}</div>
-            <div class="form-control texto-encima" style="top: 370px; left: 30px;" title="El valor de error.">
+            <div class="form-control texto-encima" style="top: 330px; left: 30px;" title="El valor de error.">
                 Error: {{ compu_nor2.12 |int() }}</div>
-            <div class="form-control texto-encima" style="top: 410px; left: 30px;" title="Delta 1.">Delta 1:
+            <div class="form-control texto-encima" style="top: 370px; left: 30px;" title="Delta 1.">Delta 1:
                 {{ compu_nor2.13 |round(3) }}</div>
-            <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 2.">Delta 2:
+            <div class="form-control texto-encima" style="top: 410px; left: 30px;" title="Delta 2.">Delta 2:
                 {{ compu_nor2.14 |round(3) }}</div>
-            <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 2.">Delta 2:
+            <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 3.">Delta 3:
                 {{ compu_nor2.15 |round(3) }}</div>
             <div class="form-control texto-encima" style="top: 420px; left: 690px;"
                 title="Es el nuevo valor del umbral.">Ø: {{ compu_nor2.18 |round(3) }}</div>
@@ -127,7 +127,7 @@
                         <th scope="col">X3</th>
                         <th scope="col" title="El peso P1 (W1) es un valor aleatorio pequeño.">P1</th>
                         <th scope="col" title="El peso P2 (W2) es un valor aleatorio pequeño.">P2</th>
-                        <th scope="col" title="El peso P2 (W2) es un valor aleatorio pequeño.">P3</th>
+                        <th scope="col" title="El peso P3 (W3) es un valor aleatorio pequeño.">P3</th>
                         <th scope="col" title="Es el umbral.">Ø</th>
                         <th scope="col" title="El valor de salida en la compuerta OR.">D</th>
                         <th scope="col" title="El valor calculado según la función escalón.">Y</th>
@@ -136,10 +136,10 @@
                         <th scope="col" title="El valor de error.">Error</th>
                         <th scope="col" title="Delta 1.">△1</th>
                         <th scope="col" title="Delta 2.">△2</th>
-                        <th scope="col" title="Delta 2.">△3</th>
+                        <th scope="col" title="Delta 3.">△3</th>
                         <th scope="col" title="Es el nuevo valor del peso P1.">P1+</th>
                         <th scope="col" title="Es el nuevo valor del peso P2.">P2+</th>
-                        <th scope="col" title="Es el nuevo valor del peso P2.">P3+</th>
+                        <th scope="col" title="Es el nuevo valor del peso P3.">P3+</th>
                         <th scope="col" title="Es el nuevo valor del umbral.">Øi</th>
                         <th scope="col">Ite</th>
                     </tr>

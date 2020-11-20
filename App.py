@@ -31,11 +31,11 @@ def cand():
             
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
 
         um = round( (u - (n * e)) , 2)
 
@@ -154,13 +154,13 @@ def can3():
               
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
-        v3 = n * e * x3
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
+        v3 = round( (n * e * x3) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
-        pe3 = p3 + v3
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
+        pe3 = round( (p3 + v3) , 2)
 
 
         um = round( (u - (n * e)) , 2)
@@ -291,11 +291,11 @@ def cand2():
             
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
 
         um = round( (u - (n * e)) , 2)
 
@@ -414,13 +414,13 @@ def can4():
               
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
-        v3 = n * e * x3
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
+        v3 = round( (n * e * x3) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
-        pe3 = p3 + v3
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
+        pe3 = round( (p3 + v3) , 2)
 
         um = round( (u - (n * e)) , 2)
 
@@ -548,11 +548,11 @@ def can5():
               
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
 
         um = round( (u - (n * e)) , 2)
 
@@ -665,13 +665,13 @@ def can6():
               
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
-        v3 = n * e * x3
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
+        v3 = round( (n * e * x3) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
-        pe3 = p3 + v3
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
+        pe3 = round( (p3 + v3) , 2)
 
         um = round( (u - (n * e)) , 2)
 
@@ -800,11 +800,11 @@ def can7():
               
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
 
         um = round( (u - (n * e)) , 2)
 
@@ -917,13 +917,13 @@ def can8():
               
         e = d - f
         
-        v1 = n * e * x1
-        v2 = n * e * x2
-        v3 = n * e * x3
+        v1 = round( (n * e * x1) , 2)
+        v2 = round( (n * e * x2) , 2)
+        v3 = round( (n * e * x3) , 2)
         
-        pe1 = p1 + v1 
-        pe2 = p2 + v2
-        pe3 = p3 + v3
+        pe1 = round( (p1 + v1) , 2) 
+        pe2 = round( (p2 + v2) , 2)
+        pe3 = round( (p3 + v3) , 2)
 
         um = round( (u - (n * e)) , 2)
 
