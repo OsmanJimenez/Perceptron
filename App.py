@@ -37,7 +37,7 @@ def cand():
         pe1 = p1 + v1 
         pe2 = p2 + v2
 
-        um = u - (n * e)
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n","p1:",p1,"\n","p2:",p2,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","um:",um,"\n",)
@@ -73,9 +73,9 @@ def cand():
         return(d, pat)
 
     def pesos(p1, p2, u):
-        p1 = random.uniform(-1.0, 1.0)
-        p2 = random.uniform(-1.0, 1.0)
-        u = random.uniform(-1.0, 1.0)
+        p1 = round(random.uniform(-1.0, 1.0), 2)
+        p2 = round(random.uniform(-1.0, 1.0), 2)
+        u = round(random.uniform(-1.0, 1.0), 2)
         return (p1, p2, u)
 
     t = 1
@@ -87,7 +87,7 @@ def cand():
     p1 ,p2 , u = pesos(p1, p2, u)
     um_lis = [0, 0, 0, 1]
     um = 1
-    n = random.uniform(0, 1.0)
+    n = round(random.uniform(0, 1.0), 2)
     pat = 0
     
     cur = mysql.connection.cursor()
@@ -135,13 +135,13 @@ def cand():
     cur3.execute('SELECT Patron, x1, x2, d FROM compuerta_an ORDER BY it DESC, Patron ASC LIMIT 4')
     data3 = cur3.fetchall()
     return render_template('and.html', compu_and = data, compu_and2 = data2[0], compu_and3 = data3)
+
 @app.route('/and2')
 def can3():
     import random
 
     def calculo(t, e, um, x1, x2, x3, d, p1, p2, p3, u, n, pat):
         y = round(( ( p1 * x1) + (p2 * x2) + (p3 * x3) - u ) , 2)
-        
         f = 0
         e = 0
         
@@ -162,7 +162,8 @@ def can3():
         pe2 = p2 + v2
         pe3 = p3 + v3
 
-        um = u - (n * e)
+
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n", "x3:",x3,"\n","p1:",p1,"\n","p2:",p2,"\n","p3:",p3,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","v3:",v3,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","pe3:",pe3,"\n","um:",um,"\n",)
@@ -296,7 +297,7 @@ def cand2():
         pe1 = p1 + v1 
         pe2 = p2 + v2
 
-        um = u - (n * e)
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n","p1:",p1,"\n","p2:",p2,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","um:",um,"\n",)
@@ -332,9 +333,9 @@ def cand2():
         return(d, pat)
 
     def pesos(p1, p2, u):
-        p1 = random.uniform(-1.0, 1.0)
-        p2 = random.uniform(-1.0, 1.0)
-        u = random.uniform(-1.0, 1.0)
+        p1 = round(random.uniform(-1.0, 1.0), 2)
+        p2 = round(random.uniform(-1.0, 1.0), 2)
+        u = round(random.uniform(-1.0, 1.0), 2)
         return (p1, p2, u)
 
     t = 1
@@ -346,7 +347,7 @@ def cand2():
     p1 ,p2 , u = pesos(p1, p2, u)
     um_lis = [0, 0, 0, 1]
     um = 1
-    n = random.uniform(0, 1.0)
+    n = round(random.uniform(0, 1.0), 2)
     pat = 0
     
     cur = mysql.connection.cursor()
@@ -421,7 +422,7 @@ def can4():
         pe2 = p2 + v2
         pe3 = p3 + v3
 
-        um = u - (n * e)
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n", "x3:",x3,"\n","p1:",p1,"\n","p2:",p2,"\n","p3:",p3,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","v3:",v3,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","pe3:",pe3,"\n","um:",um,"\n",)
@@ -553,7 +554,7 @@ def can5():
         pe1 = p1 + v1 
         pe2 = p2 + v2
 
-        um = u - (n * e)
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n","p1:",p1,"\n","p2:",p2,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","um:",um,"\n",)
@@ -585,9 +586,9 @@ def can5():
         return(d, pat)
 
     def pesos(p1, p2, u):
-        p1 = random.uniform(-1.0, 1.0)
-        p2 = random.uniform(-1.0, 1.0)
-        u = random.uniform(-1.0, 1.0)
+        p1 = round(random.uniform(-1.0, 1.0), 2)
+        p2 = round(random.uniform(-1.0, 1.0), 2)
+        u = round(random.uniform(-1.0, 1.0), 2)
         return (p1, p2, u)
 
     t = 1
@@ -601,7 +602,7 @@ def can5():
     um = 1
     pat = 0
 
-    n = random.uniform(0, 1.0)
+    n = round(random.uniform(0, 1.0), 2)
 
     cur = mysql.connection.cursor()
     cur.execute('DELETE FROM compuerta_nor')
@@ -672,7 +673,7 @@ def can6():
         pe2 = p2 + v2
         pe3 = p3 + v3
 
-        um = u - (n * e)
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n", "x3:",x3,"\n","p1:",p1,"\n","p2:",p2,"\n","p3:",p3,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","v3:",v3,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","pe3:",pe3,"\n","um:",um,"\n",)
@@ -805,7 +806,7 @@ def can7():
         pe1 = p1 + v1 
         pe2 = p2 + v2
 
-        um = u - (n * e)
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n","p1:",p1,"\n","p2:",p2,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","um:",um,"\n",)
@@ -837,9 +838,9 @@ def can7():
         return(d, pat)
 
     def pesos(p1, p2, u):
-        p1 = random.uniform(-1.0, 1.0)
-        p2 = random.uniform(-1.0, 1.0)
-        u = random.uniform(-1.0, 1.0)
+        p1 = round(random.uniform(-1.0, 1.0), 2)
+        p2 = round(random.uniform(-1.0, 1.0), 2)
+        u = round(random.uniform(-1.0, 1.0), 2)
         return (p1, p2, u)
 
     t = 1
@@ -853,7 +854,7 @@ def can7():
     um = 1
     pat = 0
 
-    n = random.uniform(0, 1.0)
+    n = round(random.uniform(0, 1.0), 2)
 
     cur = mysql.connection.cursor()
     cur.execute('DELETE FROM compuerta_nan')
@@ -924,7 +925,7 @@ def can8():
         pe2 = p2 + v2
         pe3 = p3 + v3
 
-        um = u - (n * e)
+        um = round( (u - (n * e)) , 2)
 
         print("\n", 
             "################################","\n","Iteración ", t,"\n", "################################","\n","patron:",pat,"\n","x1:",x1,"\n", "x2:",x2,"\n", "x3:",x3,"\n","p1:",p1,"\n","p2:",p2,"\n","p3:",p3,"\n","n:",n,"\n","y:",y,"\n","f:",f,"\n","d:",d,"\n","u:",u,"\n","e:",e,"\n","v1:",v1,"\n","v2:",v2,"\n","v3:",v3,"\n","pe1:",pe1,"\n","pe2:",pe2,"\n","pe3:",pe3,"\n","um:",um,"\n",)
