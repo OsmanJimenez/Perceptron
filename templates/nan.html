@@ -64,173 +64,178 @@
                 </ul>
             </div>
         </div>
-        <nav>
+    <nav>
 
-            <div class="card-body">
-                <div class="neu">
-                    <h5 class="card-title text-center">Perceptron Compuerta NAND</h5>
-                    <p class="card-text text-right">
-                        <a href="/nan2" type="button" class="btn btn-outline-secondary"><i class="fas fa-exchange-alt"></i></a>
-                        <a href="/nan" type="button" class="btn btn-outline-success"><i class="fas fa-undo-alt"></i></a>
-                        <button type="button" class="btn btn-outline-primary" onclick="exportTableToExcel('tblData')"><i
-                                class="fas fa-download"></i></button>
-                        <button type="button" class="btn btn-outline-info" data-toggle="modal"
-                            data-target="#exampleModal4"><i class="fas fa-search-plus"></i></button>
-                    </p>
+    <div class="card-body">
+        <div class="neu">
+            <h5 class="card-title text-center">Perceptron Compuerta NAND</h5>
+            <p class="card-text text-right">
+                <a href="/nan2" type="button" class="btn btn-outline-secondary"><i
+                        class="fas fa-exchange-alt"></i></a>
+                <a href="/nan" type="button" class="btn btn-outline-success"><i class="fas fa-undo-alt"></i></a>
+                <button type="button" class="btn btn-outline-primary" onclick="exportTableToExcel('tblData')"><i
+                        class="fas fa-download"></i></button>
+                <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                    data-target="#exampleModal4"><i class="fas fa-search-plus"></i></button>
+            </p>
+            <img src="{{ url_for('static', filename='img/Funcion.png') }}" class="img-fluid rounded"
+                style="width: 100%; height: 350px" alt="...">
+            <div class="form-control texto-encima" style="top: 330px; left: 30px;">Patrón:
+                {{ compu_nan2.0 |int() }}</div>
+            <div class="form-control texto-encima" style="top: 203px; left: 360px;">X1:
+                {{ compu_nan2.1 |int() }}</div>
+            <div class="form-control texto-encima" style="top: 437px; left: 360px;">X2:
+                {{ compu_nan2.2 |int() }}</div>
+            <div class="form-control texto-encima" style="top: 215px; left: 510px;"
+                title="El peso P1 (W1) es un valor aleatorio pequeño.">P1: {{ compu_nan2.3 |round(3) }}</div>
+            <div class="form-control texto-encima" style="top: 430px; left: 510px;"
+                title="El peso P2 (W2) es un valor aleatorio pequeño.">P2: {{ compu_nan2.4 |round(3) }}</div>
+            <div class="form-control texto-encima" style="top: 280px; left: 820px;"
+                title="El valor de salida en la compuerta OR.">D: {{ compu_nan2.6 |int() }}</div>
+            <div class="form-control texto-encima" style="top: 322px; left: 940px;"
+                title="El valor calculado según la función escalón.">Y: {{ compu_nan2.7 |round(3) }}</div>
+            <div class="form-control texto-encima" style="top: 190px; left: 700px;;" title="">F (x):
+                {{ compu_nan2.8 |int() }}</div>
+            <div class="form-control texto-encima" style="top: 460px; left: 690px;"
+                title="Coeficiente de Aprendizaje.">η: {{ compu_nan2.9 |round(3) }}</div>
+            <div class="form-control texto-encima" style="top: 370px; left: 30px;" title="El valor de error.">
+                Error: {{ compu_nan2.10 |int() }}</div>
+            <div class="form-control texto-encima" style="top: 410px; left: 30px;" title="Delta 1.">Delta 1:
+                {{ compu_nan2.11 |round(3) }}</div>
+            <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 2.">Delta 2:
+                {{ compu_nan2.12 |round(3) }}</div>
+            <div class="form-control texto-encima" style="top: 420px; left: 690px;"
+                title="Es el nuevo valor del umbral.">Ø: {{ compu_nan2.15 |round(3) }}</div>
+        </div>
+        <div class="mx-auto" style="width: 200px;height: 30px;"></div>
+        <div class="neu">
+            <table class="table header_fijo" id="tblData">
+                <thead>
+                    <tr>
+                        <th scope="col">Patron</th>
+                        <th scope="col">X1</th>
+                        <th scope="col">X2</th>
+                        <th scope="col" title="El peso P1 (W1) es un valor aleatorio pequeño.">P1</th>
+                        <th scope="col" title="El peso P2 (W2) es un valor aleatorio pequeño.">P2</th>
+                        <th scope="col" title="Es el umbral.">Ø</th>
+                        <th scope="col" title="El valor de salida en la compuerta OR.">D</th>
+                        <th scope="col" title="El valor calculado según la función escalón.">Y</th>
+                        <th scope="col">F(x)</th>
+                        <th scope="col" title="Coeficiente de Aprendizaje.">η</th>
+                        <th scope="col" title="El valor de error.">Error</th>
+                        <th scope="col" title="Delta 1.">△1</th>
+                        <th scope="col" title="Delta 2.">△2</th>
+                        <th scope="col" title="Es el nuevo valor del peso P1.">P1+</th>
+                        <th scope="col" title="Es el nuevo valor del peso P2.">P2+</th>
+                        <th scope="col" title="Es el nuevo valor del umbral.">Øi</th>
+                        <th scope="col">Ite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for compu in compu_nan %}
+                    <tr>
+                        <td> {{ compu.0 |int() }} </td>
+                        <td>{{ compu.1 |int() }}</td>
+                        <td>{{ compu.2 |int() }}</td>
+                        <td>{{ compu.3 |round(3) }}</td>
+                        <td>{{ compu.4 |round(3) }}</td>
+                        <td>{{ compu.5 |round(3) }}</td>
+                        <td>{{ compu.6 |int() }}</td>
+                        <td>{{ compu.7 |round(3) }}</td>
+                        <td>{{ compu.8 |int() }}</td>
+                        <td>{{ compu.9 |round(3) }}</td>
+                        <td>{{ compu.10 |int() }}</td>
+                        <td>{{ compu.11 |round(3) }}</td>
+                        <td>{{ compu.12 |round(3) }}</td>
+                        <td>{{ compu.13 |round(3) }}</td>
+                        <td>{{ compu.14 |round(3) }}</td>
+                        <td>{{ compu.15 |round(3) }}</td>
+                        <td>{{ compu.16 |int() }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-                    <img src="{{ url_for('static', filename='img/Funcion.png') }}" class="img-fluid rounded"
-                        style="width: 100%; height: 350px" alt="...">
-
-                    <div class="form-control texto-encima" style="top: 330px; left: 30px;">Patrón: {{ compu_nan2.0 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 203px; left: 360px;">X1: {{ compu_nan2.1 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 437px; left: 360px;">X2: {{ compu_nan2.2 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 215px; left: 510px;" title="El peso P1 (W1) es un valor aleatorio pequeño.">P1: {{ compu_nan2.3 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 430px; left: 510px;" title="El peso P2 (W2) es un valor aleatorio pequeño.">P2: {{ compu_nan2.4 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 280px; left: 820px;" title="El valor de salida en la compuerta OR.">D: {{ compu_nan2.6 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 322px; left: 940px;" title="El valor calculado según la función escalón.">Y: {{ compu_nan2.7 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 190px; left: 700px;;" title="">F (x): {{ compu_nan2.8 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 460px; left: 690px;" title="Coeficiente de Aprendizaje.">η: {{ compu_nan2.9 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 370px; left: 30px;" title="El valor de error.">Error: {{ compu_nan2.10 |int() }}</div>
-          <div class="form-control texto-encima" style="top: 410px; left: 30px;" title="Delta 1.">Delta 1: {{ compu_nan2.11 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 450px; left: 30px;" title="Delta 2.">Delta 2: {{ compu_nan2.12 |round(3) }}</div>
-          <div class="form-control texto-encima" style="top: 420px; left: 690px;" title="Es el nuevo valor del umbral.">Ø: {{ compu_nan2.15 |round(3) }}</div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Comprobar Perceptron Unicapa Compuerta NAND
+                    </h5>
                 </div>
-
-                <div class="mx-auto" style="width: 200px;height: 30px;"></div>
-
-                <div class="neu">
-                    <table class="table header_fijo" id="tblData">
-                        <thead>
-                            <tr>
-                                <th scope="col">Patron</th>
-                                <th scope="col">X1</th>
-                                <th scope="col">X2</th>
-                                <th scope="col" title="El peso P1 (W1) es un valor aleatorio pequeño.">P1</th>
-                                <th scope="col" title="El peso P2 (W2) es un valor aleatorio pequeño.">P2</th>
-                                <th scope="col" title="Es el umbral.">Ø</th>
-                                <th scope="col" title="El valor de salida en la compuerta OR.">D</th>
-                                <th scope="col" title="El valor calculado según la función escalón.">Y</th>
-                                <th scope="col">F(x)</th>
-                                <th scope="col" title="Coeficiente de Aprendizaje.">η</th>
-                                <th scope="col" title="El valor de error.">Error</th>
-                                <th scope="col" title="Delta 1.">△1</th>
-                                <th scope="col" title="Delta 2.">△2</th>
-                                <th scope="col" title="Es el nuevo valor del peso P1.">P1+</th>
-                                <th scope="col" title="Es el nuevo valor del peso P2.">P2+</th>
-                                <th scope="col" title="Es el nuevo valor del umbral.">Øi</th>
-                                <th scope="col">Ite</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for compu in compu_nan %}
-                            <tr>
-
-                                <td> {{ compu.0 |int() }} </td>
-                                <td>{{ compu.1 |int() }}</td>
-                                <td>{{ compu.2 |int() }}</td>
-                                <td>{{ compu.3 |round(3) }}</td>
-                                <td>{{ compu.4 |round(3) }}</td>
-                                <td>{{ compu.5 |round(3) }}</td>
-                                <td>{{ compu.6 |int() }}</td>
-                                <td>{{ compu.7 |round(3) }}</td>
-                                <td>{{ compu.8 |int() }}</td>
-                                <td>{{ compu.9 |round(3) }}</td>
-                                <td>{{ compu.10 |int() }}</td>
-                                <td>{{ compu.11 |round(3) }}</td>
-                                <td>{{ compu.12 |round(3) }}</td>
-                                <td>{{ compu.13 |round(3) }}</td>
-                                <td>{{ compu.14 |round(3) }}</td>
-                                <td>{{ compu.15 |round(3) }}</td>
-                                <td>{{ compu.16 |int() }}</td>
-                            </tr>
-                            {% endfor %}
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Comprobar Perceptron Unicapa Compuerta NAND
-                            </h5>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img src="{{ url_for('static', filename='img/compuerta_nand.jpg') }}"
+                                class="img-fluid rounded" style="width: 100%; height: 350px" alt="...">
                         </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <img src="{{ url_for('static', filename='img/compuerta_nand.jpg') }}"
-                                        class="img-fluid rounded" style="width: 100%; height: 350px" alt="...">
-                                </div>
-                                <div class="col-sm">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col">Patrón</th>
-                                                <th scope="col">X1</th>
-                                                <th scope="col">X2</th>
-                                                <th scope="col">D</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for compu3 in compu_nan3 %}
-                                            <tr>
-                                                <td
-                                                    style="width:66px;max-width:66px;padding-top: 10px;padding-bottom: 10px;">
-                                                    <button type="button" class="btn btn-outline-success"
-                                                        style="display:none" id="{{ compu3.0 }}"><i
-                                                            class="fas fa-angle-double-right"></i></button> </td>
-                                                <td>{{ compu3.0 |int() }}</td>
-                                                <td>{{ compu3.1 |int() }}</td>
-                                                <td>{{ compu3.2 |int() }}</td>
-                                                <td>{{ compu3.3 |int() }}</td>
-                                            </tr>
-                                            {% endfor %}
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="row" style="margin-top: 20px;">
-                                    <div class="col-sm">
-                                        <label for="x1" class="form-label">X1:</label>
-                                        <select id="x1" class="form-select">
-                                            <option>0</option>
-                                            <option>1</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm">
-                                        <label for="x2" class="form-label">X2:</label>
-                                        <select id="x2" class="form-select">
-                                            <option>0</option>
-                                            <option>1</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm">
-                                        <button type="button" class="btn btn-outline-success btn-block"
-                                            style="margin-top: 35px;" value="Comprobar"
-                                            onclick="comprobar()">Comprobar</button>
-                                    </div>
-                                    <div class="col-sm">
-                                        <label for="resultado" class="form-label">Resultado:</label>
-                                        <input type="text" class="form-control" id="resultado" readonly>
-                                    </div>
-                                </div>
-                            </div>
-
+                        <div class="col-sm">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Patrón</th>
+                                        <th scope="col">X1</th>
+                                        <th scope="col">X2</th>
+                                        <th scope="col">D</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for compu3 in compu_nan3 %}
+                                    <tr>
+                                        <td
+                                            style="width:66px;max-width:66px;padding-top: 10px;padding-bottom: 10px;">
+                                            <button type="button" class="btn btn-outline-success"
+                                                style="display:none" id="{{ compu3.0 }}"><i
+                                                    class="fas fa-angle-double-right"></i></button> </td>
+                                        <td>{{ compu3.0 |int() }}</td>
+                                        <td>{{ compu3.1 |int() }}</td>
+                                        <td>{{ compu3.2 |int() }}</td>
+                                        <td>{{ compu3.3 |int() }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+                    <div class="container">
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-sm">
+                                <label for="x1" class="form-label">X1:</label>
+                                <select id="x1" class="form-select">
+                                    <option>0</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                            <div class="col-sm">
+                                <label for="x2" class="form-label">X2:</label>
+                                <select id="x2" class="form-select">
+                                    <option>0</option>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                            <div class="col-sm">
+                                <button type="button" class="btn btn-outline-success btn-block"
+                                    style="margin-top: 35px;" value="Comprobar"
+                                    onclick="comprobar()">Comprobar</button>
+                            </div>
+                            <div class="col-sm">
+                                <label for="resultado" class="form-label">Resultado:</label>
+                                <input type="text" class="form-control" id="resultado" readonly>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+                </div>
             </div>
-
+        </div>
+    </div>
 </body>
 
 <!-- MDB -->
@@ -308,9 +313,4 @@
 
     });
 </script>
-
-<script type="text/javascript">
-
-</script>
-
 </html>
