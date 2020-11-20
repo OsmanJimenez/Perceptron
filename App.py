@@ -395,7 +395,7 @@ def cand2():
     data3 = cur3.fetchall()
     return render_template('or.html', compu_or = data, compu_or2 = data2[0], compu_or3 = data3)
 
-@app.route('/ort')
+@app.route('/or2')
 def can4():
     import random
 
