@@ -1,3 +1,4 @@
+
 ![Algoritmo que mediante algoritmos de inteligencia artificial comprueba las compuertas lógicas de AND, NAND, OR y NOR.](https://i.pinimg.com/originals/80/23/2d/80232d7d5c2ebc0f5748d4bddc97ecd1.png)
 
 # Perceptrón Python
@@ -11,6 +12,20 @@ Algoritmo que mediante algoritmos de inteligencia artificial comprueba las compu
  - Identificar el algoritmo mas eficientes para la realización de los procesos
  - Diseñar una interfaz grafica que muestre los valores calculados
  - Mostrar el numero de iteraciones y valores generados en cada transacción del proceso en el perceptrón.
+
+## Explicación                                           
+
+ 1)  Definir (x1) y (x2), | Según la compuerta lógica en este caso AND.
+ 2)  Inicializar los pesos (p1) y (p2) entre -1 y 1 | Numero Aleatorio.
+ 3)  Calcular umbral (u) entre -1 y 1 | Numero Aleatorio.
+ 4)  Calcular coeficiente de aprendizaje (n) entre 0 y 1 | Numero Aleatorio.
+ 5)  Calcular coeficiente de aprendizaje (y) | Formula.
+ 6)  Aplicar función escalón dependiendo del coeficiente de aprendizaje (f) | Función Escalón.
+ 7)  Calcular valor esperado (d) | Según la compuerta lógica en este caso AND.
+ 8)  Calcular valor de error (e) | Formula.
+ 9)  Calcular variación para los pesos (v1) y (v2) | Formula.
+ 10) Calcular nuevos pesos (pe1) y (pe2) | Formula .
+ 11)  Calcular nuevo umbral (um) | Formula.
 
 
 ## Herramientas de Desarrollo
@@ -53,4 +68,3 @@ Algoritmo que mediante algoritmos de inteligencia artificial comprueba las compu
  
  ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
-
